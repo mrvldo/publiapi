@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router() 
 const Mahasiswa = require('../models/Mahasiswa')
-const verifyToken = require('../config/verifyToken')
+// const verifyToken = require('../config/verifyToken')
 
 // Create 
 router.post('/', async(req, res) => {
