@@ -23,7 +23,7 @@ router.post('/', async(req, res) => {
     }
 })
 
-router.get('/', verifyToken, async(req, res) => {
+router.get('/',  async(req, res) => {
     // tampung input mahasiswa 
     try {
         // simpan data 
