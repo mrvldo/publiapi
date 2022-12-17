@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router() 
 const Mahasiswa = require('../models/Mahasiswa')
+const response = require('../config/response')
 
 // Create 
 router.post('/', async(req, res) => {
@@ -17,7 +18,8 @@ router.post('/', async(req, res) => {
         // simpan data 
         const mahasiswa = await mahasiswaPost.save()
         // response
-        res.json(mahasiswa)
+        // res.json(mahasiswa)
+        response(201, mahasiswa, "berhasil", res)
     } catch (error) {
         res.json({message: error})
     }
